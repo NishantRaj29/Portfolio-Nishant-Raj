@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Supermercado+One&display=swap');
+:root{
+    --yellow:#f9ca24;
+}
+
+*{
+    font-family: 'Supermercado One', cursive;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--yellow) ;
+    color:#333;    
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 0.5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: var(--yellow);
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span{
+    color: var(--yellow);
+}
+
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    height:100%;
+    width:35rem;
+    background: #1a1a1a;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: white;
+}
+
+header .user .post{
+    font-size: 3.5rem;
+    color: white;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding:1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background: var(--yellow) ;
+}
+
+#menu{
+    position:fixed;
+    top:2rem;
+    right:2rem;
+    background:red;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+     } 
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+
+    header .toggle{
+        left:0%;
+    }
+
+    body{
+        padding: 0;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:400px){
+    header{
+        width:100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color:white;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: var(--yellow); 
+}  
+
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}  
+
+
+.skills h1{
+    text-align: center;
+}
+
+.skills h3{
+    
+    font-size: large;
+    margin: 5px;
+}
+
+.skills{
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.skills li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.skills .bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
+}
+
+.skills .bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.skills .bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236,0,140,1)0%,rgba(252,103,103,1)100%);
+}
+
+.skills .html{
+    width: 90%;
+    animation: html 3s;
+}
+
+.skills .css{
+    width: 70%;
+    animation: CSS 3s;
+}
+
+.skills .php{
+    width: 45%;
+    animation: php 3s;
+}
+
+.skills .javascript{
+    width: 90%;
+    animation: javascript 3s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes CSS{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+
+
+.hobby .box-container{
+    padding: 2rem 0;
+    display:  flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hobby .box-container .box{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    background: rgba(255,255,255,0.2);
+    text-align: center;
+    width: 32rem;
+}
+
+.hobby .box-container .box i{
+    color: #fff;
+    font-size: 4.5rem;
+    padding: 1rem 0;
+}
+
+.hobby .box-container .box p{
+    color: #eee;
+    font-size: 3rem;
+    padding: 0.5rem 5rem;
+}
